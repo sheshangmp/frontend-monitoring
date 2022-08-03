@@ -220,7 +220,7 @@ class App extends Component {
             </button>
           )}
 
-        <button onClick={methodDoesNotExist}>Break the world</button>
+        <button onClick={this.methodDoesNotExist}>Break the world</button>
         </div>
       </div>
     );
