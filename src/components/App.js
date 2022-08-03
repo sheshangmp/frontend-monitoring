@@ -131,6 +131,10 @@ class App extends Component {
     );
   }
 
+  methodDoesNotExist(){
+    throw Error("Error on Purpose")
+  }
+
   render() {
     const total = this.state.cart.reduce((t, i) => t + i.price, 0);
     const cartDisplay = this.state.cart.reduce((c, { id }) => {
@@ -215,6 +219,8 @@ class App extends Component {
               Empty cart
             </button>
           )}
+
+        <button onClick={methodDoesNotExist}>Break the world</button>
         </div>
       </div>
     );
